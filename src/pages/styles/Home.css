@@ -1,0 +1,17 @@
+.container{
+    
+    background-color: rgb(17, 20, 20);
+    min-height: 100vh;
+    min-width: 100vw;
+
+}
+.cards{
+  
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
+h1{
+   color: white; 
+   padding: 1rem 2rem;
+}
