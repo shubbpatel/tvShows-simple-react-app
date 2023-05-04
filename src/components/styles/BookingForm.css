@@ -1,9 +1,21 @@
 .booking-form{
-    color: white;
+    color: rgb(12, 12, 12);
+    background-color: wheat;
+    border-radius: 5px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     
 }
 .booking-form input{
     border-radius: 5px;
     margin: 0 1rem;
+}
+@media (max-width:750px) {
+.booking-form input{
+    margin: 1rem 0;
+width: 90%;
+}
 }
 

@@ -11,7 +11,22 @@
     grid-template-columns: auto auto auto auto;
     gap: 1rem;
 }
-h1{
+.container h1{
    color: white; 
    padding: 1rem 2rem;
+}
+@media (max-width:1000px) {
+    .cards{
+        grid-template-columns: auto auto auto;
+    }
+}
+@media (max-width:750px) {
+    .cards{
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width:600px) {
+    .cards{
+        grid-template-columns: auto;
+    }
 }

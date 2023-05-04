@@ -3,8 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import ShowDetails from "../components/ShowDetails";
 import BookingForm from "../components/BookingForm";
-import style from './styles/ShowSummary.css';
-
+import style from "./styles/ShowSummary.css";
 
 export default function ShowSummary() {
   const [show, setShow] = useState(null);
@@ -17,9 +16,7 @@ export default function ShowSummary() {
 
   const fetchShows = async () => {
     try {
-      const response = await axios.get(
-        `https://api.tvmaze.com/search/shows?q=${id}`
-      );
+      const response = await axios.get(`https://api.tvmaze.com/shows/${id}`);
       const data = response.data;
       setShow(data);
     } catch (error) {
@@ -32,22 +29,15 @@ export default function ShowSummary() {
 
   return (
     <div className="summary-container">
-        <div className="booking">
-<div>
-
-      {show && <ShowDetails show={console.log(show)} />}
-</div>
-<div>
-
-      <button className="btn btn-primary" onClick={bookingForm}>
-        {showBookingForm ? "Close Booking form" : "Book ticket"}
-      </button>
-</div>
-      <div>
-
-      {showBookingForm && <BookingForm show={show} />}
-      </div>
+      <div className="booking">
+        <div>{show && <ShowDetails show={show} />}</div>
+        <div>
+          <button className="btn btn-lg btn-danger" onClick={bookingForm}>
+            {showBookingForm ? "Close Booking form" : "Book ticket"}
+          </button>
         </div>
+        <div>{showBookingForm && <BookingForm show={show} />}</div>
+      </div>
     </div>
   );
 }

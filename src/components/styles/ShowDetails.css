@@ -1,0 +1,15 @@
+.show-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+}
+.show-details h5{
+color: white;}
+.show-details p{
+    padding: 2rem;
+    color: white;
+}
